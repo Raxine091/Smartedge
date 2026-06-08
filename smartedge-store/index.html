@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartEdge Electronics | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SmartEdge</div>
+        <ul class="nav-links">
+            <li><button class="nav-btn"><a>Home</a></button></li>
+            <li><button class="nav-btn"><a href="about.html">About</a></button></li>
+            <li><button class="nav-btn"><a href="contact.html">Contact</a></button></li>
+            <li><button onclick="openSignupModal()" class="nav-btn"><a>Sign Up</a></button></li>
+            <li><button class="nav-btn"><a href="cart.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+    </header>
+
+    <section class="controls" id="shop">
+        <input type="text" id="search" placeholder="Search products...">
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="smartphones">Smartphones</button>
+            <button class="filter-btn" data-category="laptops">Laptops</button>
+            <button class="filter-btn" data-category="tablets">Tablets</button>
+            <button class="filter-btn" data-category="headphones">Headphones</button>
+            <button class="filter-btn" data-category="smartwatches">Smartwatches</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+        </div>
+    </section>
+
+    <main class="product-grid" id="product-container">
+    </main>
+
+    <div id="product-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <div id="modal-price" class="price"></div>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSignupModal()">&times;</span>
+            <h2>Create Account</h2>
+            <form id="signup-form" style="display:flex; flex-direction:column; gap:15px; margin-top:20px;">
+                <input type="text" placeholder="Full Name" required style="padding:12px; border-radius:8px; border:1px solid #334155; background:#1e293b; color:white;">
+                <input type="email" placeholder="Email Address" required style="padding:12px; border-radius:8px; border:1px solid #334155; background:#1e293b; color:white;">
+                <input type="password" placeholder="Password" required style="padding:12px; border-radius:8px; border:1px solid #334155; background:#1e293b; color:white;">
+                <button type="submit" class="btn-add">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

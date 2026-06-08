@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Login | SmartEdge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">⚡ SmartEdge</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="card" style="max-width: 400px; margin: 100px auto; padding: 40px;">
+        <h2 style="margin-top: 0;">Director Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" style="width:100%; padding:12px; margin:10px 0; background:rgba(255,255,255,0.05); border:1px solid var(--card-border); border-radius:8px; color:white; box-sizing:border-box;" required>
+            <input type="password" id="password" placeholder="Password" style="width:100%; padding:12px; margin:10px 0; background:rgba(255,255,255,0.05); border:1px solid var(--card-border); border-radius:8px; color:white; box-sizing:border-box;" required>
+            <button type="submit" class="btn-add" style="width: 100%; border:none; margin-top:10px;">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const user = document.getElementById('username').value;
+            localStorage.setItem('currentUser', user);
+            alert("Welcome back, Director " + user);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
