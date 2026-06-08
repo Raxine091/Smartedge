@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SmartEdge</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .contact-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--card-border);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            color: white;
+            box-sizing: border-box; /* Crucial for width: 100% */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SmartEdge</div>
+        <ul class="nav-links">
+            <li><a class="nav-btn" href="index.html">Home</a></li>
+            <li><a class="nav-btn" href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <h2>Contact SmartEdge</h2>
+        <form onsubmit="alert('Message sent!'); return false;">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="How can we help?" rows="5"></textarea>
+            <button type="submit" class="btn-add" style="width: 100%;">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
